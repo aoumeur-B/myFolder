@@ -1,0 +1,31 @@
+<div>
+  <h2>Accueil</h2>
+</div>
+
+
+<div>
+
+<form (ngSubmit)="register(monForm.value)" #monForm="ngForm">
+    <input type="text" placeholder="Nom" name="nom" value="" ngModel >
+    <input type="text" placeholder="Prénom" name="prenom" value="" ngModel>
+    <input type="date" placeholder="Date de naissance" name="date" value="" ngModel>
+    <input type="submit"  value="Envoyer">
+  </form>
+</div>
+
+<fieldset class="scheduler-border">
+  <legend class="scheduler-border">Information:</legend>
+  Name: {{nom}} <br>
+  Prénom:  {{prenom}}<br>
+  Date de naissance: {{age}} 
+</fieldset>
+
+<div><div [class]="shapeColor">  </div>
+    <div><p [class]="message"> message: {{Text | upchar:2 }}  </p></div>
+    <div [class]=" 'carre ' + classCarre">  </div>
+    <div [class]=" 'carre ' + classCarre2">  </div>
+    <input type="button" value="click" (click)="changeCouleur()" >
+</div>
+
+
+  
