@@ -1,0 +1,24 @@
+h2{
+    color: brown;
+    margin: auto;
+    margin-top: 15px;
+}
+p{
+    
+    font-size: 25px;
+}
+
+.affiche{
+    font-size: 25px;
+    color: blueviolet;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+#image{
+    display: inline-block;
+   float: right;
+}
+#result{
+display: inline-block;
+    width: 450px;
+    height: 450px;
+}

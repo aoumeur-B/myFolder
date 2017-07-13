@@ -21,7 +21,7 @@
 </fieldset>
 
 <div><div [class]="shapeColor">  </div>
-    <div><p [class]="message"> message: {{Text | upchar:2 }}  </p></div>
+    <div><p [class]="message"> message: {{Text |lowercase| upchar:17 }}  </p></div>
     <div [class]=" 'carre ' + classCarre">  </div>
     <div [class]=" 'carre ' + classCarre2">  </div>
     <input type="button" value="click" (click)="changeCouleur()" >

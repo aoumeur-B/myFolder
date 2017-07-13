@@ -1,0 +1,37 @@
+
+<h2 appColor colors={{color}} >Ma directive</h2>
+<h2>
+  Search Film
+</h2>
+<hr>
+<div>
+  <form (ngSubmit)="search(formSearch.value)" #formSearch="ngForm">
+    <label for="ex-title">Titre: </label>
+    <input type="text" id="ex-title" placeholder="Titre du film" name="title" value="" ngModel>
+    <label for="ex-year">Année:</label>
+    <input type="text" id="ex-year" placeholder="Année" name="year" value="" ngModel>
+    <input type="number" name="quantity" min="1900" max="2017">
+    <input type="submit" value="Search">
+  </form>
+</div>
+<h2>
+  Results
+</h2>
+<hr>
+<div>
+  <div id="result">
+    <p>Titre : <span class="affiche">{{titre_resp}}</span></p>
+    <p>Année de sortie : <span class="affiche">{{year_resp}}</span></p>
+    <p>Réalisateur : <span class="affiche"> {{realisateur_resp}}</span></p>
+    <p>Genre : <span class="affiche"> {{Genre_resp}}</span></p>
+    <p>Durée du film : <span class="affiche"> {{Duree_resp}}</span></p>
+  </div>
+  <div id="image">
+    <p><img [src]="imageUrl" alt="" ></p>
+  </div>
+</div>
+<div id="ex-response" [innerHtml]="results.html">  </div>
+
+
+
+
