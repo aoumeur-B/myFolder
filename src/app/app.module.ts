@@ -1,3 +1,5 @@
+// Routes
+import { ROUTES } from './app.routes'; // import de la constant ROUTES du fichier app.routes.ts
 
 // Modules
 import { BrowserModule } from '@angular/platform-browser';
@@ -5,6 +7,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router'; 
 
 // composant
 
@@ -21,8 +24,9 @@ import { UpcharPipe } from './pipes/upchar.pipe';
 //Services
 import {FilmsService } from './services/films.service';
 
-//Directive
+//Directives
 import { ColorDirective } from './directives/color.directive';
+
 
 @NgModule({
   declarations: [
@@ -38,7 +42,11 @@ import { ColorDirective } from './directives/color.directive';
    
   ],
   imports: [
-    BrowserModule, NgbModule.forRoot(), FormsModule, HttpModule
+    BrowserModule, 
+    NgbModule.forRoot(), 
+    FormsModule, 
+    HttpModule,
+    RouterModule.forRoot(ROUTES) // on peut remplacer Routes par :  { path: "", component: HomeComponent },
   ],
   providers: [FilmsService],
   bootstrap: [MainComponent]
